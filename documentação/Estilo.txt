@@ -1,0 +1,13 @@
+CORES
+
+Cor principal: 00A2A2
+
+Fundos:
+
+Claro: 181a1b
+Escuro: 101010
+
+
+Fonte:
+
+Poppins

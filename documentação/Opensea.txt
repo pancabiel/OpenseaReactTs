@@ -1,0 +1,72 @@
+Objetos
+
+Arte
+
+	Nome
+	Valor
+	Dono
+	Coleção
+	Categorias
+	Excluido
+	*Imagem
+
+Coleção
+	
+	Nome
+	Criador
+	Categorias
+	Excluido
+
+Usuário
+	
+	Usuário
+	Senha
+	Email
+	Nome
+	Tipo
+	Dinheiro *Para testes
+	
+	
+Venda
+
+	Arte
+	Valor
+	Vendedor
+	Comprador
+	Data
+
+
+Requisitos Funcionais
+
+Usuário
+	Logar
+	Criar uma coleção
+	Criar uma NFT
+	
+	Botar NFT a venda
+	Comprar NFT
+
+Administrador
+	Excluir NFT
+	Excluir coleção
+
+
+
+Páginas
+	Principal
+	Coleção
+	Arte
+	Usuário
+	Configurações
+
+Componentes
+	Header
+	Coleção Destaque
+	Coleções Novas
+		Lista Coleção
+		Item Lista Coleção
+	Categorias
+		Item Categoria
+	Coleções em alta
+		Card Coleção
+	Footer
