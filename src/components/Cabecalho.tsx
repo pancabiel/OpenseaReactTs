@@ -161,22 +161,15 @@ function Cabecalho() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <Logo />
           <Typography
             variant="h6"
             noWrap
             component="div"
+            margin={1}
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            OpenSea
           </Typography>
           <Search>
             <SearchIconWrapper>

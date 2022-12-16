@@ -4,60 +4,55 @@ import ColecoesAlta from "./components/ColecoesAlta"
 import ColecoesNovas from "./components/ColecoesNovas"
 import Rodape from "./components/Rodape"
 import Cabecalho from "./components/Cabecalho"
-import { Global, css } from "@emotion/react"
+import { createTheme, CssBaseline } from "@mui/material"
 
-export const theme = {
-  colors: {
-    corFundo: '#181a1b'
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'Poppins'
+    ].join(','),
+    h6: {
+      fontWeight: "bold"
+    }
+  },
+  palette: {
+    primary: {
+      main: '#101010'
+    },
+    secondary: {
+      main: '#00A2A2'
+    },
+    text: {
+      primary: '#ffffff'
+    },
+    background: {
+      default: '#181a1b'
+    }
+  },
+  components: {
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          paddingLeft: 30,
+          paddingRight: 30
+        }
+      }
+    }
   }
-}
-
-// const globalStyles = globalCss({
-//   '*': { 
-//     margin: 0,
-//     padding: 0,
-//     color: 'White',
-//     fontFamily: 'Poppins'
-//   },
-//   body: {
-//     backgroundColor: "$corFundo"
-//   },
-//   titulo: {
-//     color: 'Red'
-//   }
-// });
-
-// export const { styled, css } = createStitches({
-//   theme: {
-//     colors: {
-//       corFundo: '#181a1b',
-//       corFundoEscuro: '#101010',
-//       corPrincipal: '#00A2A2'
-//     },
-//   },
-// });
+})
 
 function App() {
 
   return (
-    <div>
-      <Global 
-      styles={{
-        '*': {
-          color: 'white'
-        },
-        body: {
-          backgroundColor: theme.colors.corFundo
-        }
-      }}
-      />
-      <Cabecalho />
-      <ColecaoDestaque />
-      <ColecoesNovas />
-      <Categorias />
-      <ColecoesAlta />
-      <Rodape />
-    </div>
+      <div>
+        <CssBaseline />
+        <Cabecalho />
+        <ColecaoDestaque />
+        <ColecoesNovas />
+        <Categorias />
+        <ColecoesAlta />
+        <Rodape />
+      </div>
   )
 }
 
