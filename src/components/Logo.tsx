@@ -1,10 +1,9 @@
 import logo from "../assets/logo.png"
+import { Avatar } from "@mui/material";
 
 function Logo() {
   return (
-      <img
-        src={logo}
-        />
+      <Avatar src={logo} />
   )
 }
 
