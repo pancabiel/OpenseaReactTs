@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
-import { Box } from '@mui/material';
+import { Box, Button, List, ListItem } from '@mui/material';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -9,10 +9,10 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Logo from "./Logo";
@@ -45,16 +45,19 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
+  width: '100%',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
-    },
+    transition: theme.transitions.create('width')
   },
+}));
+
+const AppBarListItem = styled(ListItem)(({theme}) => ({
+  paddingTop: 0,
+  paddingBottom: 0,
+  paddingLeft: 10,
+  paddingRight: 10
 }));
 
 
@@ -171,42 +174,54 @@ function Cabecalho() {
           >
             OpenSea
           </Typography>
-          <Search>
+          <Search sx={{ flexGrow: 1 }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Pesquisar artes, coleções, e usuários"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
+            <List sx={{ display: "flex", padding: 0 }}>
+            <AppBarListItem>
+                <Button
+                  color="inherit"
+                  sx={{ fontWeight: "600" }}
+                >
+                  Explorar
+                </Button>
+              </AppBarListItem>
+              <AppBarListItem>
+                <Button
+                  color="inherit"
+                  sx={{ fontWeight: "600" }}
+                >
+                  Ajuda
+                </Button>
+              </AppBarListItem>
+              <AppBarListItem>
+                <IconButton
+                  size="large"
+                  edge="end"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  color="inherit"
+                >
+                  <AccountCircle fontSize="inherit" />
+                </IconButton>
+              </AppBarListItem>
+              <AppBarListItem>
+                <IconButton size="large" color="inherit">
+                  <Badge>
+                    <ShoppingCartIcon fontSize="inherit" />
+                  </Badge>
+                </IconButton>
+              </AppBarListItem>
+            </List>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
