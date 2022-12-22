@@ -26,6 +26,15 @@ const theme = createTheme({
     error: {
       main: red.A400,
     },
+  },
+  components: {
+    MuiMenu: {
+      styleOverrides: {
+        list: {
+          color: 'black'
+        }
+      }
+    }
   }
 });
 
