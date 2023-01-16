@@ -7,22 +7,27 @@ const theme = createTheme({
       'Poppins'
     ].join(','),
     h6: {
-      fontWeight: "bold"
+      fontWeight: "bold",
+      fontSize: 18
     },
     h5: {
+      fontWeight: "bold",
+      fontSize: 20
+    },
+    h4: {
       fontWeight: "bold",
       fontSize: 30
     }
   },
   palette: {
     primary: {
-      main: '#181a1b',
+      main: '#101010',
     },
     secondary: {
       main: '#00A2A2',
     },
     background: {
-      default: '#101010'
+      default: '#181a1b'
     },
     text: {
       primary: '#FFFFFF',

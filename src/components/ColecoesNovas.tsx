@@ -48,7 +48,7 @@ function ColecoesNovas() {
   return (
     <div>
       <Typography
-        variant="h5"
+        variant="h4"
         noWrap
         component="div"
         sx={{ display: { xs: 'none', sm: 'block', marginBottom: 20 } }}
@@ -70,18 +70,16 @@ function ColecoesNovas() {
                   <Box sx={{ display: "flex", alignItems: "center"}}>
                     <Typography 
                       color="text.secondary"
-                      fontWeight="bold"
-                      fontSize={18}
+                      variant="h6"
                       margin={2}
                       > {colecoes.indexOf(row) + 1} </Typography>
                     <Avatar 
                       variant="rounded"
-                      src={"file:///C:/root/colecao/8.png"}
+                      src={`http://127.0.0.1:8887/colecao/${row["id"]}.png`}
                       sx={{ width: 70, height: 70, borderRadius:"15%"}}/>
                     <Typography 
+                      variant="h6"
                       margin={2}
-                      fontWeight="bold"
-                      fontSize={18}
                       > {row["nome"]} </Typography>
                   </Box>
                 </TableCell>

@@ -166,7 +166,7 @@ function Cabecalho() {
         <Toolbar>
           <Logo />
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="div"
             margin={1}

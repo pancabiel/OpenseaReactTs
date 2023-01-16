@@ -7,7 +7,11 @@ function App() {
   return (
     <div>
       <Cabecalho/>
-      <Box margin={4}>
+      <Box 
+        padding={4}
+        paddingLeft={10}
+        paddingRight={10}
+        >
         <ColecoesNovas/>
       </Box>
       <Rodape/>
