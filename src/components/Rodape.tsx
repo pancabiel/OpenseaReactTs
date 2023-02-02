@@ -12,6 +12,7 @@ const botaoRedeSocial = (img: any) => {
   return (
     <Button
       variant="contained"
+      key={img}
       sx={{height: 50, width: 50, minWidth: 0, borderRadius:"15%"}}
       >
         <Avatar 
